@@ -18,11 +18,13 @@ public class MainActivity extends AppCompatActivity {
     public void checkClicked(View v) {
         CheckBox checkbox = (CheckBox) v;
 
+        // Get id of image.
         String name = checkbox.getText().toString();
         int imageNo = getResources().getIdentifier(name, "id", getPackageName());
 
         ImageView image = findViewById(imageNo);
 
+        // Swap visibility of image.
         if (checkbox.isChecked()) {
             image.setVisibility(View.VISIBLE);
         } else {
